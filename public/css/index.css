@@ -13,7 +13,7 @@ body,
 }
 
 #input-msg{
-  border-top: 2px solid black;
+  border-top: 2px solid #a0a0a0;
 }
 
 .iOCYje {
@@ -43,7 +43,7 @@ body,
 }
 
 .rsc-container {
-  background-color: #171f2e !important;
+  /* background-color: #171f2e !important; */
 }
 
 .rsc-content {
