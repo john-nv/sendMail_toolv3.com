@@ -5,7 +5,9 @@ body,
   margin: 0;
   letter-spacing: .03em;
   font-family: "Montserrat", sans-serif !important;
-  /* font-family: Gilroy,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; */
+}
+body {
+  background-color: transparent;
 }
 
 #content {
