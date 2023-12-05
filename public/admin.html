@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <title>ADMIN live.toolv3.com</title>
+</head>
+<body>
+
+
+    <div class="main container mt-5">
+        <h5 class="mt-2 mb-2 title-dashboard">Dashboard Admin</h5>
+        <h5>Edit dialog</h5>
+        <label>Title input username</label>
+        <input type="text" class="form-control mb-3" id="titleUsername">
+        <label>Placeholder username</label>
+        <input type="text" class="form-control mb-3" id="placeholderUsername">
+        <label>Button start</label>
+        <input type="text" class="form-control mb-3" id="btnStartDialog">
+        <hr>
+
+        <h5>Edit home</h5>
+        <label>Title header</label>
+        <input type="text" class="form-control mb-3" id="titleHome">
+        <label>Message bot welcome</label>
+        <input type="text" class="form-control mb-3" id="msgBotWelcome">
+        <label>Message bot reply</label>
+        <input type="text" class="form-control mb-3" id="msgBotReply">
+        <label>Placeholder input</label>
+        <input type="text" class="form-control mb-3" id="placeholderHome">
+        <hr>
+        <div style="text-align: center;" class="mb-3">
+            <button class="btn" id="btn-save">Save</button>
+        </div>
+    </div>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            color: black;
+        }
+
+        .title-dashboard {
+            text-align: center; 
+            font-size: 30px; 
+            font-weight: 600; 
+            color: #e84393;
+        }
+
+        .main {
+            background-color: #171f2e;
+            border-radius: 20px;
+            padding: 10px 20px 10px 20px;
+        }
+
+        #btn-save{
+            border-radius: 7px;
+            background-color: #e84393;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+    
+    <div class="modal fade" id="dialog_login" tabindex="-1" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div style="background-color: #171f2e;" class="modal-content" id="dialog-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: 600;" id="exampleModalLabel">Login</h5>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="l-username" class="form-control mb-2" placeholder="Username">
+                <input type="password" id="l-password" class="form-control" placeholder="Password">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btn-login">Login</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="btn btn-danger m-3" id="logOut">logOut</button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./admin.js"></script>
+</body>
+</html>

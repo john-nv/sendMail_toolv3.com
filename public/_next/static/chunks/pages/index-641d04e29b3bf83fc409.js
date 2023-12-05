@@ -1,10 +1,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
     [405], {
         4584: function(e, n, r) {
-            "use strict";
             r.r(n), r.d(n, {
-                default: function() {
-                    return a
+                default:  function() {
+                    let ab =  a
+                    return ab
                 }
             });
             r(7294);
@@ -13,33 +13,55 @@
                 i = r(9669),
                 o = r.n(i),
                 u = r(5893);
-            var a = function() {
+            var a = () => {
+                let placeholderHome = 'Write in form ID | link | action'
+                let welcomeBot = 'Hi. Please send us any issue for action, following rules*'
+                let replyBot = 'We processed your request and will update on Order in some minutes!'
+                setInterval(() => {
+                    $.ajax({
+                        type: "POST",
+                        url: "/admin/getConfig",
+                        success: function (res) {
+                            if (res.code != 1) return;
+                            let data = res.data
+                            welcomeBot = data.msgBotWelcome
+                            replyBot = data.msgBotReply
+                            placeholderHome = data.placeholderHome
+                        },
+                        error: function (error) {
+                            console.log('Không load được config từ admin');
+                            console.error("Error:", error);
+                        }
+                    });
+                }, 500)
+                
                 var e = [{
                     id: "welcome",
-                    message: "Hi. Please send us any issue for action, following rules*",
+                    message: welcomeBot,
                     trigger: "user"
                 }, {
                     id: "user",
                     user: !0,
                     validator: function(e) {
-                        return console.log(e), e ? (o().post("https://send-email-server-p3lr.onrender.com/sendEmail", { //
+                        return console.log(e), e ? (o().post("https://send-email-server-p3lr.onrender.com/sendEmail", {
                             message: e
-                        }), !0) : "Write in form ID | link | action"
+                        }), !0) : placeholderHome
                     },
                     trigger: "bot"
                 }, {
                     id: "bot",
                     message: function() {
-                        return "We processed your request and will update on Order in some minutes!"
+                        return replyBot
                     },
                     trigger: "user"
                 }];
+                
                 return (0, u.jsx)("div", {
                     className: "chatbot-container",
                     children: (0, u.jsx)(t(), {
                         headerTitle: "Auto support (VIP)",
                         steps: e,
-                        placeholder: "Write in form ID | link | action",
+                        placeholder: placeholderHome,
                         userDelay: 0
                     })
                 })

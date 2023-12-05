@@ -8,6 +8,17 @@
       rel="shortcut icon"
       href="./img/cropped-meta-favi-512-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/index.css" />
     <link
       async=""
@@ -71,9 +82,7 @@
             height="520px"
           >
             <div class="sc-gqjmRU glfuN rsc-header">
-              <h2 class="sc-VigVT lifvqk rsc-header-title">
-                Auto support (VIP)
-              </h2>
+              <h2 id="title-home" style="font-weight: 600;" class="sc-VigVT lifvqk rsc-header-title">Auto support (VIP)</h2>
             </div>
             <div id="content" class="sc-gZMcBi fBGGBn rsc-content" height="520px"></div>
             <div id="input-msg" class="sc-cSHVUG hDUXUW rsc-footer">
@@ -108,8 +117,47 @@
         </div>
       </div>
     </div>
-    <script src="./main.js
-    "></script>
+
+
+
+    <!-- open dialog -->
+    <div class="modal fade" id="dialog_alert" style="margin-top: 21vh;" tabindex="-1" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content" id="dialog-content" >
+          <div class="modal-header">
+            <h5 class="modal-title" style="font-weight: 600; color: rgb(69 69 69);" id="title_dialog">Enter you username</h5>&ensp;
+            <i style="font-weight: 600; color: rgb(69 69 69);" class="fa-solid fa-headset"></i>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="getNameUser" class="form-control" placeholder="Enter your username">
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btnGetNameUser" style="background-color: #e84393; border: #e84393; font-weight: 550;" class="btn btn-primary">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      #dialog-content {
+        background-color: #f0f0f0;
+        color: white;
+        font-weight: 500; 
+      }
+
+      #getNameUser{
+        background-color: #e8e8e8;
+        color: black;
+        border-color: #2e2e2e;
+        border-radius: 10px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
     <script id="__NEXT_DATA__" type="application/json">
       {
         "props": { "pageProps": {} },
@@ -122,5 +170,6 @@
         "scriptLoader": []
       }
     </script>
+    <script src="./main.js"></script>
   </body>
 </html>
