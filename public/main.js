@@ -1,5 +1,10 @@
 let username = 'user'
 
+$(document).ready(function() {
+  const nameOld = localStorage.getItem('name')
+  if(nameOld.length > 0) $('#getNameUser').val(nameOld)
+});
+
 $('#dialog_alert').modal('show');
 
 $(document).ready(function() {
@@ -38,6 +43,7 @@ $('#btnGetNameUser').on('click', () => {
   const name = $('#getNameUser').val()
   if(name.length < 3) return alert('Vui lòng nhập tên của bạn')
   username = name
+  localStorage.setItem('name', username)
   $('#dialog_alert').modal('hide');
 })
 
